@@ -299,5 +299,41 @@ public class CulminatingCannon {
         return v1;
     }
 
+ public static double vxvyWithTheta(double vx, double vy){
+        // DECLARATIONS
+        double angle=0;
+        double angleDegrees=0;
+        
+        // CALCULATE THE INITIAL ANGLE
+        angle = Math.atan(vy/vx);
+        angleDegrees=Math.toDegrees(angle);
+        
+        // RETURN THE DEGREES FOR THE INITAL ANGLE
+        return angleDegrees; 
+    }
+    
+    public static double vxThetaFORvy(double vx, double initialTheta){
+        // DECLARATIONS
+        double vy;
+        
+        // CALCULATE THE
+        vy = vx * Math.tan(initialTheta);
+        
+        // RETURN THE 
+        return vy; 
+    }
+    
+    public static double vyThetaFORvx(double vx, double initialTheta){
+        // DECLARATIONS
+        double vy;
+        
+        // CALCULATE THE
+        vy = vx * Math.tan(initialTheta);
+        
+        // RETURN THE 
+        return vy; 
+    }
 
+
+    
 }
