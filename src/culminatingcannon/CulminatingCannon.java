@@ -1,7 +1,4 @@
 
-//hi will
-
-
 package culminatingcannon;
 
 /**
@@ -22,7 +19,7 @@ public class CulminatingCannon {
         System.out.println("initial vel is: "+dv1taOFv1(dv1taOFdy(v1,t,a),t,a));
     }
     
-    public static double dtOFv(double d, double t){
+    public static double dxtOFv(double d, double t){
         // DECLARE A CONSTANT SPEED VARIABLE
         double v;
         
@@ -33,7 +30,7 @@ public class CulminatingCannon {
         return v;
     }
     
-    public static double dvOFt(double d, double v){
+    public static double dxvOFt(double d, double v){
         // DECLARE A DELTA TIME VARIABLE
         double t;
         
@@ -44,7 +41,7 @@ public class CulminatingCannon {
         return v;
     }
     
-    public static double tvFd(double t, double v){
+    public static double tvOFdx(double t, double v){
         // DECLARE A DELTA DISPLACEMENT
         double d;
         
@@ -60,7 +57,7 @@ public class CulminatingCannon {
     // IT USES THE FORMULA d = v1*t + 1/2 * a * t *t
 
     
-    public static double dv1taOFdy(double v1,double t,double a){
+    public static double dyv1taOFdy(double v1,double t,double a){
         // DECLARE Δ DISPLACEMENT VARIABLE
         double Δdy;
 
@@ -71,7 +68,7 @@ public class CulminatingCannon {
         return Δdy;
     }
     
-    public static double dv1taOFv1(double Δdy,double t,double a){
+    public static double dyv1taOFv1(double Δdy,double t,double a){
         // DECLARE initial speed
         double v1;
 
@@ -82,7 +79,7 @@ public class CulminatingCannon {
         return v1;
     }
     
-    public static double dv1tv1OFa(double Δdy,double t,double v1){
+    public static double dyv1tv1OFa(double Δdy,double t,double v1){
         // DECLARE ACCELERATION VARIABLE
         double a;
 
@@ -93,7 +90,7 @@ public class CulminatingCannon {
         return a;
     }
     
-    public static double dv1av1OFt(double Δdy,double a,double v1){
+    public static double dyv1av1OFt(double Δdy,double a,double v1){
         // DECLARE ACCELERATION VARIABLE
         double t1, t2;
         double trueTime = 133742069; // set as wild number to verify for testing
@@ -213,7 +210,7 @@ public class CulminatingCannon {
     
     //Method to solve for the final velocity given the initial velocity, acceleration, and displacement
     //Uses the formula v2= square root(v1*v1+2ad)
-    public static double v1adOFv2(double v1, double a, double d){
+    public static double v1adyOFv2(double v1, double a, double d){
         //Variable to be solved for
         double v2;
         //Formula to solve for variable
@@ -224,7 +221,7 @@ public class CulminatingCannon {
     
     //Method to solve for the initial velocity given the final velocity, acceleration, and displacement
     //Uses the formula v1= square root(v2*v2-2ad)
-    public static double v2adOFv1(double v2, double a, double d){
+    public static double v2adyOFv1(double v2, double a, double d){
         //Variable to be solved for
         double v1;
         //Formula to solve for variable
@@ -235,7 +232,7 @@ public class CulminatingCannon {
     
     //Method to solve for the acceleration given the initial velocity, final velocity, and displacement
     //Uses the formula a = (v2*v2-v1*v1)/2d
-    public static double v1v2dOFa(double v1, double v2, double d){
+    public static double v1v2dyOFa(double v1, double v2, double d){
         //Variable to be solved for
         double a;
         //Formula to solve for variable
@@ -246,7 +243,7 @@ public class CulminatingCannon {
     
     //Method to solve for the displacement given the initial velocity, final velocity, and acceleration
     //Uses the formula d = (v2*v2-v1*v1)/2a
-    public static double v1v2aOFd(double v1, double v2, double a){
+    public static double v1v2aOFdy(double v1, double v2, double a){
         //Variable to be solved for
         double d;
         //Formula to solve for variable
@@ -257,7 +254,7 @@ public class CulminatingCannon {
     
     //Method to solve for the displacement given the initial velocity, final velocity, and time
     //Uses the formula d=((v2+v1)/2)*t 
-    public static double v1v2tOFd(double v1, double v2, double t){
+    public static double v1v2tOFdy(double v1, double v2, double t){
         //Variable to be solved for
         double d;
         //Formula to solve for variable
@@ -268,7 +265,7 @@ public class CulminatingCannon {
     
     //Method to solve for the time given the initial velocity, final velocity, and displacement
     //Uses the formula t=2d/v2+v1
-    public static double v1v2dOFt(double v1, double v2, double d){
+    public static double v1v2dyOFt(double v1, double v2, double d){
         //Variable to be solved for
         double t;
         //Formula to solve for variable
@@ -279,7 +276,7 @@ public class CulminatingCannon {
     
     //Method to solve for the final velocity given the initial velocity, displacement, and time
     //Uses the formula v2=2d/t-v1
-    public static double v1dtOFv2(double v1, double d, double t){
+    public static double v1dytOFv2(double v1, double d, double t){
         //Variable to be solved for
         double v2;
         //Formula to solve for variable
@@ -290,7 +287,7 @@ public class CulminatingCannon {
     
     //Method to solve for the initial velocity given the final velocity, displacement, and time
     //Uses the formula v1=2d/t-v2
-    public static double v2dtOFv1(double v2, double d, double t){
+    public static double v2dytOFv1(double v2, double d, double t){
         //Variable to be solved for
         double v1;
         //Formula to solve for variable
@@ -299,7 +296,7 @@ public class CulminatingCannon {
         return v1;
     }
 
- public static double vxvyWithTheta(double vx, double vy){
+ public static double v1xv1yWithTheta(double vx, double vy){
         // DECLARATIONS
         double angle=0;
         double angleDegrees=0;
@@ -312,7 +309,7 @@ public class CulminatingCannon {
         return angleDegrees; 
     }
     
-    public static double vxThetaFORvy(double vx, double initialTheta){
+    public static double v1xThetaFORv1y(double vx, double initialTheta){
         // DECLARATIONS
         double vy;
         
@@ -323,7 +320,7 @@ public class CulminatingCannon {
         return vy; 
     }
     
-    public static double vyThetaFORvx(double vx, double initialTheta){
+    public static double v1yThetaFORv1x(double vx, double initialTheta){
         // DECLARATIONS
         double vy;
         
