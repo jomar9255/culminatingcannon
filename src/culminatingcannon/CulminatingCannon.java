@@ -38,7 +38,7 @@ public class CulminatingCannon {
         t = d/v;
         
         // RETURN
-        return v;
+        return t;
     }
     
     public static double tvOFdx(double t, double v){
